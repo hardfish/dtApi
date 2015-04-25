@@ -1,6 +1,7 @@
 package com.dtdream;
 
 import com.dtdream.baseapi.DtApi;
+import com.dtdream.entity.action.ServerCreate;
 
 /**
  * Created by X0269 on 2015/4/25.
@@ -10,6 +11,6 @@ public class App1 extends DtAdapterFactory {
     {
         DtApi dtApi = DtAdapterFactory.getApi("Aliyun");
 
-        dtApi.createInstance();
+        dtApi.compute().server().create(new ServerCreate());
     }
 }
