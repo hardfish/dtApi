@@ -12,8 +12,8 @@ public class App1 {
     {
         DtApi dtApi = DtAdapterFactory.getApi("Aliyun");
         String serverUrl = "http://ecs.aliyuncs.com/"; //例如: http://ecs.aliyuncs.com/
-        String accessKeyId = "N8uTikOXJ55I7iAZ";
-        String accessKeySecret = "u35Kxc0HUZIg4zmkiTHcYeLfVKf3ij";
+        String accessKeyId = "N8uTikOyyyyyyyy";
+        String accessKeySecret = "u35Kxc0HUZIg4zmkxxxxxxxxxx";
 
         // 1. 建立连接
         ClientContext context = dtApi.createClient(serverUrl, accessKeyId, accessKeySecret);
