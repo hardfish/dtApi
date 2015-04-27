@@ -1,8 +1,4 @@
-package com.dtdream.adapter.aliyun;
-
-/**
- * Created by X0269 on 2015/4/25.
- */
+package com.dtdream.adapter.openstack;
 
 import com.dtdream.baseapi.*;
 import com.google.common.collect.Maps;
@@ -10,11 +6,9 @@ import com.google.common.collect.Maps;
 import java.util.Map;
 
 /**
- * Simple API Provider which keeps internally Maps interface implementations as singletons
- *
- * @author Jeremy Unruh
+ * Created by X0269 on 2015/4/27.
  */
-public class AliyunProvider implements APIProvider {
+public class OpenstackProvider implements APIProvider {
 
 	private static final Map<Class<?>, Class<?>> bindings = Maps.newHashMap();
 	private static final Map<Class<?>, Object> instances = Maps.newConcurrentMap();
@@ -24,9 +18,9 @@ public class AliyunProvider implements APIProvider {
 	 */
 	@Override
 	public void initialize() {
-		bind(IdentityService.class, AliyunIdentity.class);
-		bind(ComputeService.class, AliyunCompute.class);
-		bind(ServerService.class, AliyunServer.class);
+		bind(IdentityService.class, OpenstackIdentity.class);
+		bind(ComputeService.class, OpenstackCompute.class);
+		bind(ServerService.class, OpenstackServer.class);
 	}
 
 	/**
@@ -57,4 +51,3 @@ public class AliyunProvider implements APIProvider {
 		bindings.put(api, impl);
 	}
 }
-

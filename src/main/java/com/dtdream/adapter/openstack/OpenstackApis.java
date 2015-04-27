@@ -1,4 +1,4 @@
-package com.dtdream.base;
+package com.dtdream.adapter.openstack;
 
 /**
  * Created by X0269 on 2015/4/25.
@@ -8,17 +8,14 @@ import com.dtdream.baseapi.APIProvider;
 import com.dtdream.baseapi.ComputeService;
 import com.dtdream.baseapi.IdentityService;
 
-
-import java.util.ServiceLoader;
-
 /**
  * Provides access to the Major APIs and Buildables
  *
  * @author Jeremy Unruh
  */
-public class Apis {
+public class OpenstackApis {
 
-	private static final APIProvider provider = initializeProvider();
+	private static final APIProvider providers = initializeProvider();
 
 	/**
 	 * Gets the API implementation based on Type
@@ -28,7 +25,7 @@ public class Apis {
 	 * @return the API implementation
 	 */
 	public static <T> T get(Class<T> api) {
-		return provider.get(api);
+		return providers.get(api);
 	}
 
 	/**
@@ -51,7 +48,7 @@ public class Apis {
 
 
 	private static APIProvider initializeProvider() {
-		APIProvider p = ServiceLoader.load(APIProvider.class).iterator().next();
+		APIProvider p = new OpenstackProvider(); //ServiceLoader.load(APIProvider.class).iterator().next();
 		p.initialize();
 		return p;
 	}

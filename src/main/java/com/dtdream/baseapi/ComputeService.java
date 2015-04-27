@@ -5,4 +5,5 @@ package com.dtdream.baseapi;
  */
 public interface ComputeService {
 	ServerService server();
+
 }
