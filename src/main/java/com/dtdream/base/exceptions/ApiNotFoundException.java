@@ -1,4 +1,4 @@
-package com.dtdream.baseapi;
+package com.dtdream.base.exceptions;
 
 /**
  * Created by X0269 on 2015/4/25.

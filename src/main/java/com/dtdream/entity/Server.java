@@ -5,19 +5,16 @@ package com.dtdream.entity;
  */
 public class Server {
 	private String serverID;
+	private String instanceID;
 	private String instanceName;
-
-	public Server(String serverID) {
-		this.serverID = serverID;
-	}
 
 	public Server(String serverID, String instanceName) {
 		this.serverID = serverID;
 		this.instanceName = instanceName;
 	}
 
-	public Server() {
-
+	public Server(String instanceID) {
+		this.instanceID = instanceID;
 	}
 
 	public String getInstanceName() {

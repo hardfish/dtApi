@@ -5,6 +5,7 @@ package com.dtdream.adapter.aliyun;
  */
 
 import com.dtdream.baseapi.*;
+import com.dtdream.base.exceptions.ApiNotFoundException;
 import com.google.common.collect.Maps;
 
 import java.util.Map;
